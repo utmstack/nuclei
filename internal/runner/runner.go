@@ -13,7 +13,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/projectdiscovery/nuclei/v3/internal/pdcp"
+	"github.com/utmstack/nuclei/v3/internal/pdcp"
 	"github.com/projectdiscovery/nuclei/v3/pkg/authprovider"
 	"github.com/projectdiscovery/nuclei/v3/pkg/fuzz/frequency"
 	"github.com/projectdiscovery/nuclei/v3/pkg/input/provider"
@@ -32,8 +32,8 @@ import (
 	"github.com/projectdiscovery/ratelimit"
 
 	"github.com/projectdiscovery/gologger"
-	"github.com/projectdiscovery/nuclei/v3/internal/colorizer"
-	"github.com/projectdiscovery/nuclei/v3/internal/httpapi"
+	"github.com/utmstack/nuclei/v3/internal/colorizer"
+	"github.com/utmstack/nuclei/v3/internal/httpapi"
 	"github.com/projectdiscovery/nuclei/v3/pkg/catalog"
 	"github.com/projectdiscovery/nuclei/v3/pkg/catalog/config"
 	"github.com/projectdiscovery/nuclei/v3/pkg/catalog/disk"
