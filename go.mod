@@ -1,4 +1,4 @@
-module github.com/projectdiscovery/nuclei/v3
+module github.com/utmstack/nuclei/v3
 
 go 1.21
 
