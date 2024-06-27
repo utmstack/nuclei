@@ -88,6 +88,7 @@ require (
 	github.com/projectdiscovery/httpx v1.6.3
 	github.com/projectdiscovery/mapcidr v1.1.34
 	github.com/projectdiscovery/n3iwf v0.0.0-20230523120440-b8cd232ff1f5
+	github.com/projectdiscovery/nuclei/v3 v3.2.9
 	github.com/projectdiscovery/ratelimit v0.0.45
 	github.com/projectdiscovery/rdap v0.9.1-0.20221108103045-9865884d1917
 	github.com/projectdiscovery/sarif v0.0.1
@@ -232,7 +233,6 @@ require (
 	github.com/yuin/goldmark-emoji v1.0.1 // indirect
 	github.com/zcalusic/sysinfo v1.0.2 // indirect
 	github.com/zeebo/blake3 v0.2.3 // indirect
-	go.uber.org/goleak v1.3.0 // indirect
 	golang.org/x/arch v0.3.0 // indirect
 	golang.org/x/sync v0.7.0 // indirect
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
