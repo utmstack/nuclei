@@ -440,3 +440,15 @@ func WithCatalog(cat catalog.Catalog) NucleiSDKOptions {
 		return nil
 	}
 }
+
+// WithCertificates allows to use custom auth certificates, all 3 must be set if any
+func WithCertificates(ClientCAFile string, ClientCertFile string, ClientKeyFile string) NucleiSDKOptions {
+	return func(e *NucleiEngine) error {
+		if ClientCAFile != "" && ClientCertFile != "" && ClientKeyFile != "" {
+			e.opts.ClientCAFile = ClientCAFile
+			e.opts.ClientCertFile = ClientCertFile
+			e.opts.ClientKeyFile = ClientKeyFile
+		}
+		return nil
+	}
+}
