@@ -12,7 +12,6 @@ import (
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/gologger/levels"
 	"github.com/projectdiscovery/httpx/common/httpx"
-	"github.com/utmstack/nuclei/v3/internal/runner"
 	"github.com/projectdiscovery/nuclei/v3/pkg/authprovider"
 	"github.com/projectdiscovery/nuclei/v3/pkg/catalog/config"
 	"github.com/projectdiscovery/nuclei/v3/pkg/catalog/disk"
@@ -33,6 +32,7 @@ import (
 	"github.com/projectdiscovery/nuclei/v3/pkg/types"
 	nucleiUtils "github.com/projectdiscovery/nuclei/v3/pkg/utils"
 	"github.com/projectdiscovery/ratelimit"
+	"github.com/utmstack/nuclei/v3/internal/runner"
 )
 
 var sharedInit *sync.Once
@@ -231,7 +231,7 @@ func (e *NucleiEngine) init(ctx context.Context) error {
 	// and also upgrade templates to latest version if available
 	installer.NucleiSDKVersionCheck()
 
-	if DefaultConfig.CanCheckForUpdates() {
+	if !e.disableTemplatesAutoUpgrade {
 		return e.processUpdateCheckResults()
 	}
 	return nil
